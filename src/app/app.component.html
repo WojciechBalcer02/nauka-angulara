@@ -1,8 +1,8 @@
-<div>
+<div class="card border-primary mb-3 p-5">
   <div class="container">
     <div>
       <input [(ngModel)]="newTask">
-      <button (click)="add()">dodaj</button>
+      <button (click)="add()" type="button" class="btn btn-primary btn-xs">dodaj</button>
     </div>
   </div>
 
@@ -11,8 +11,8 @@
       <ng-container *ngIf="tasksList.length > 0;else notasks">
         <ng-container *ngFor="let task of tasksList">
           {{task}}
-          <button (click)="remove(task)">usuń</button>
-          <button (click)="done(task)" style="color:blue">zrobione</button>
+          <button (click)="remove(task)" type="button" class="btn btn-danger">usuń</button>
+          <button (click)="done(task)" class="btn btn-success">zrobione</button>
           <br>
         </ng-container>
       </ng-container>
